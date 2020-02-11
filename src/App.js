@@ -15,10 +15,10 @@ import GlobalStyle from './components/GlobalStyles';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin, faGithub, faStackOverflow} from '@fortawesome/free-brands-svg-icons';
-import { faGem } from '@fortawesome/free-solid-svg-icons';
+import { faGem, faCode, faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { Reset } from 'styled-reset';
 
-library.add(fab, faLinkedin, faGithub, faStackOverflow, faGem);
+library.add(fab, faLinkedin, faGithub, faStackOverflow, faGem, faCode, faDesktop);
 
 
 function App() {

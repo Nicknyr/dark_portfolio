@@ -9,7 +9,7 @@ const STYLES = styled.div`
     //width: 100%;
     margin: 0 auto;
     background-color: #181818;
-    padding: 3rem;
+    //padding: 3rem;
     margin-bottom: 5rem;
 `;
 
@@ -37,6 +37,24 @@ const PROJECTS = styled.ul`
         //display: flex;
         margin-top: 3rem;
         //justify-content: center;
+
+        .project {
+            //background: yellow;
+            padding: 2rem;
+
+            h4 {
+                font-size: 
+            }
+
+            p {
+                font-size: 1.1rem;
+                //text-align: left;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
     }
 `;
 
@@ -45,7 +63,7 @@ const BUTTONCONTAINER = styled.div`
     width: 100%; 
     display: flex;
     justify-content: space-around;
-    background: blue;
+    //background: blue;
 `;
 
 const BUTTON = styled.button`
@@ -55,8 +73,17 @@ const BUTTON = styled.button`
     border: none;
     border-radius: 10px;
     margin: 2rem 1rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    //width: 15rem;
+    //height: 2.5rem;
     padding: .5rem 1.5rem;
+    font-weight: bold;
+
+    .fa-sm {
+        margin-right: .5rem;
+        color: #E8E9F3;
+    }
 `;
 
 const Portfolio = () => {
@@ -69,7 +96,7 @@ const Portfolio = () => {
                         <FontAwesomeIcon
                             icon='gem'
                             size="2x"
-                            color="#20FC8F"
+                            color="#E8E9F3"
                         />
                     </H3CONTAINER>
                     <PROJECTS>
@@ -81,8 +108,22 @@ const Portfolio = () => {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
                                 </p>
                                 <BUTTONCONTAINER>
-                                    <BUTTON>View</BUTTON>
-                                    <BUTTON>Code</BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='desktop'
+                                            size="sm"
+                                            color="#E8E9F3"
+                                        />
+                                        View
+                                    </BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='code'
+                                            size="sm"
+                                            color="#E8E9F3"
+                                        />
+                                        Code
+                                    </BUTTON>
                                 </BUTTONCONTAINER>
                             </div>
                             
@@ -95,8 +136,22 @@ const Portfolio = () => {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Condimentum mattis pellentesque id nibh tortor id.
                                 </p>
                                 <BUTTONCONTAINER>
-                                    <BUTTON>View</BUTTON>
-                                    <BUTTON>Code</BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='desktop'
+                                            size="sm"
+                                            color="#20FC8F"
+                                        />
+                                        View
+                                    </BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='code'
+                                            size="sm"
+                                            color="#20FC8F"
+                                        />
+                                        Code
+                                    </BUTTON>
                                 </BUTTONCONTAINER>
                             </div>
                             
@@ -109,8 +164,22 @@ const Portfolio = () => {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Est pellentesque elit ullamcorper dignissim cras tincidunt.
                                 </p>
                                 <BUTTONCONTAINER>
-                                    <BUTTON>View</BUTTON>
-                                    <BUTTON>Code</BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='desktop'
+                                            size="sm"
+                                            color="#20FC8F"
+                                        />
+                                        View
+                                    </BUTTON>
+                                    <BUTTON>
+                                        <FontAwesomeIcon
+                                            icon='code'
+                                            size="sm"
+                                            color="#20FC8F"
+                                        />
+                                        Code
+                                    </BUTTON>
                                 </BUTTONCONTAINER>
                             </div>
                             

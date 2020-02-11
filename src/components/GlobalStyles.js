@@ -24,6 +24,11 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: .8rem;
     }
 
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
     a {
         color: #20FC8F;
         font-family: 'IBM Plex Mono', monospace;
