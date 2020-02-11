@@ -3,14 +3,21 @@ import styled, { css } from 'styled-components';
 import ParticlesSmall from './ParticlesSmall';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import NPM from '../assets/npm.png';
+import Brochure from '../assets/brochure.png';
+import Top100 from '../assets/top100.png';
 
 const STYLES = styled.div`
     height: auto;
-    //width: 100%;
+    width: 100%;
     margin: 0 auto;
     background-color: #181818;
-    //padding: 3rem;
     margin-bottom: 5rem;
+
+    @media(min-width: 768px) {
+        width: 70%;
+        padding: 3rem;
+    }
 `;
 
 const CONTAINER = styled.div`
@@ -39,12 +46,9 @@ const PROJECTS = styled.ul`
         //justify-content: center;
 
         .project {
-            //background: yellow;
             padding: 2rem;
-
-            h4 {
-                font-size: 
-            }
+            display: flex;
+            flex-direction: column;
 
             p {
                 font-size: 1.1rem;
@@ -56,6 +60,39 @@ const PROJECTS = styled.ul`
             }
         }
     }
+
+
+    @media(min-width: 768px) {
+
+        li {
+            .project {
+                flex-direction: row;
+
+                p {
+                    text-align: left;
+                }
+
+                .image-container {
+                    //background: yellow;
+                    flex: 1;
+                }
+
+                .image-even {
+                    order: 2;
+                }
+
+                .details-even {
+                    order: 1;
+                }
+
+                .details-container {
+                    //background: red;
+                    flex: 1;
+                }
+            }
+        }
+        
+     }
 `;
 
 const BUTTONCONTAINER = styled.div`
@@ -79,6 +116,11 @@ const BUTTON = styled.button`
     //height: 2.5rem;
     padding: .5rem 1.5rem;
     font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .8;
+    }
 
     .fa-sm {
         margin-right: .5rem;
@@ -92,98 +134,245 @@ const Portfolio = () => {
             <CONTAINER>
                 <ScrollAnimation  animateIn="fadeIn" duration="3">
                     <H3CONTAINER>
-                        <h3>Portfolio</h3>
+                        <h3>Projects</h3>
                         <FontAwesomeIcon
                             icon='gem'
                             size="2x"
-                            color="#E8E9F3"
+                            color=" #20FC8F"
                         />
                     </H3CONTAINER>
                     <PROJECTS>
-                        <li>
-                            <div className="project">
-                                <h4>Project One</h4>
-                                <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
-                                </p>
-                                <BUTTONCONTAINER>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='desktop'
-                                            size="sm"
-                                            color="#E8E9F3"
-                                        />
-                                        View
-                                    </BUTTON>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='code'
-                                            size="sm"
-                                            color="#E8E9F3"
-                                        />
-                                        Code
-                                    </BUTTON>
-                                </BUTTONCONTAINER>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
+                                <h4>NPM LANDING PAGE CLONE</h4>
+                                <div className="project">
+                                    <div className="image-container">
+                                        <img src={NPM} height="250" width="auto"/>
+                                    </div>
+                                    <div className="details-container">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
                             </div>
-                            
-                        </li>
-                        <li>
-                            <div className="project">
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
                                 <h4>Project Two</h4>
-                                <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Condimentum mattis pellentesque id nibh tortor id.
-                                </p>
-                                <BUTTONCONTAINER>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='desktop'
-                                            size="sm"
-                                            color="#20FC8F"
-                                        />
-                                        View
-                                    </BUTTON>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='code'
-                                            size="sm"
-                                            color="#20FC8F"
-                                        />
-                                        Code
-                                    </BUTTON>
-                                </BUTTONCONTAINER>
+                                <div className="project">
+                                    <div className="image-container image-even">
+                                        <img src={Brochure} height="250" width="auto" />
+                                    </div>
+                                    <div className="details-container details-even">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
                             </div>
-                            
-                        </li>
-                        <li>
-                            <div className="project">
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
                                 <h4>Project Three</h4>
-                                <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Est pellentesque elit ullamcorper dignissim cras tincidunt.
-                                </p>
-                                <BUTTONCONTAINER>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='desktop'
-                                            size="sm"
-                                            color="#20FC8F"
-                                        />
-                                        View
-                                    </BUTTON>
-                                    <BUTTON>
-                                        <FontAwesomeIcon
-                                            icon='code'
-                                            size="sm"
-                                            color="#20FC8F"
-                                        />
-                                        Code
-                                    </BUTTON>
-                                </BUTTONCONTAINER>
+                                <div className="project">
+                                    <div className="image-container">
+                                        <img src={Top100} height="250" width="auto"/>
+                                    </div>
+                                    <div className="details-container">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
                             </div>
-                            
-                        </li>
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
+                                <h4>Project Two</h4>
+                                <div className="project">
+                                    <div className="image-container image-even">
+                                        <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
+                                    </div>
+                                    <div className="details-container details-even">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
+                            </div>
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
+                                <h4>Project Three</h4>
+                                <div className="project">
+                                    <div className="image-container">
+                                        <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
+                                    </div>
+                                    <div className="details-container">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
+                            </div>
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
+                                <h4>Project Two</h4>
+                                <div className="project">
+                                    <div className="image-container image-even">
+                                        <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
+                                    </div>
+                                    <div className="details-container details-even">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
+                            </div>
+                            </li>
+                        </ScrollAnimation>
+                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                            <li>
+                                <h4>Project Three</h4>
+                                <div className="project">
+                                    <div className="image-container">
+                                        <img src='https://via.placeholder.com/250.png/09f/fff%20C/O%20https://placeholder.com/' />
+                                    </div>
+                                    <div className="details-container">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum. Fermentum dui faucibus in ornare quam viverra.
+                                        </p>
+                                        <BUTTONCONTAINER>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='desktop'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                View
+                                            </BUTTON>
+                                            <BUTTON>
+                                                <FontAwesomeIcon
+                                                    icon='code'
+                                                    size="sm"
+                                                    color="#E8E9F3"
+                                                />
+                                                Code
+                                            </BUTTON>
+                                        </BUTTONCONTAINER>
+                                    </div>
+                            </div>
+                            </li>
+                        </ScrollAnimation>
                     </PROJECTS>
                 </ScrollAnimation>
             </CONTAINER>

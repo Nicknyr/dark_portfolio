@@ -108,6 +108,8 @@ const STYLES = styled.div`
 
         @media(min-width: 768px) {
             display: flex;
+            //position: fixed;
+            //z-index: 999;
         }
     }
 `;

@@ -124,7 +124,7 @@ const Hero = () => {
                         "events": {
                             "onhover": {
                                 "enable": true,
-                                "mode": "push"
+                                "mode": "repulse"
                             }
                         }
                     },
