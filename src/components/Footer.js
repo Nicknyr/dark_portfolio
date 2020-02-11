@@ -17,9 +17,13 @@ const STYLES = styled.div`
 
 const CONTAINER = styled.div`
     background: #1f1f1f;
-    width: 50%;
+    width: 100%;
     height: auto;
     text-align: center;
+
+    @media(min-width: 768px) {
+        width: 50%;
+    }
 
     p {
         width: 80%;

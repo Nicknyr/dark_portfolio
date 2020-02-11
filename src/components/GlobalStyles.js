@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+// #DF2935
+
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500|IBM+Plex+Sans:400,500&display=swap');
     //font-family: 'IBM Plex Mono', monospace;

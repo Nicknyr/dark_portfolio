@@ -15,7 +15,7 @@ const STYLES = styled.div`
 const CONTAINER = styled.div`
     height: auto;
     width: auto;
-    padding: 2rem;
+    padding: 3rem;
     //position: absolute;
     //background: red;
     background: #181818;
