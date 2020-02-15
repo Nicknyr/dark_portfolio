@@ -8,17 +8,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const STYLES = styled.div`
     height: auto;
     width: auto;
-    //position: relative;
+    position: relative;
 `;
 
 
 const CONTAINER = styled.div`
     height: auto;
     width: auto;
-    padding: 3rem;
+    padding: 1.5rem;
     //position: absolute;
     //background: red;
     background: #181818;
+
+    p {
+        margin: 1.4rem auto;
+    }
 
     .highlight {
         color: #20FC8F;
@@ -42,8 +46,7 @@ const CONTAINER = styled.div`
         }
 
         p {
-            //width: 80%;
-            margin: 1.4rem auto;
+            
         }
     }
 `;
@@ -59,7 +62,7 @@ const About = () => {
     return (
         <STYLES>
             {/*<ParticlesSmall />*/}
-            <CONTAINER name="about">
+            <CONTAINER name="about-me">
                 <ScrollAnimation  animateIn="fadeIn" duration="3">
                     <H3CONTAINER>
                         <h3>About Me</h3>

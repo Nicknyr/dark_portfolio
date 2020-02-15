@@ -4,15 +4,17 @@ import { bubble as Menu } from 'react-burger-menu'
 import { render } from '@testing-library/react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const STYLES = styled.div`
     height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
-    //background-color: #181818;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: #181818;
+    //background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 999;
 
 
     /* Position and sizing of burger button */
@@ -94,13 +96,13 @@ const STYLES = styled.div`
             margin-right: 2rem;
             
             a {
-                color: #E8E9F3;
+                color: #20FC8F;
                 font-weight: bold;
                 font-size: 1.2rem;
                 cursor: pointer;
 
                 &:hover {
-                    color: #20FC8F;
+                    color: #E8E9F3;
                     text-decoration: none;
                 }
             }
@@ -143,7 +145,13 @@ class Navbar extends Component {
         return (
             <STYLES>
                 <CONTAINER>
-                    <h1>Logo</h1>
+                    <span>
+                        <FontAwesomeIcon
+                            icon='gem'
+                            size="lg"
+                            color="#20FC8F"
+                        />
+                    </span>
                     <Menu right>
                         <a id="home" className="menu-item" href="/">Home</a>
                         <a id="about" className="menu-item" href="/about">About</a>
@@ -154,7 +162,7 @@ class Navbar extends Component {
                         <li>
                             <Link
                                 activeClass="active"
-                                to="about"
+                                to="about-me"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
@@ -174,22 +182,22 @@ class Navbar extends Component {
                         <li>
                             <Link
                                 activeClass="active"
-                                to="contact"
+                                to="blog"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >BLOG</Link>
+                        </li>
+                        <li>
+                            <Link
+                                activeClass="active"
+                                to="footer"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration= {500}
                             >CONTACT</Link>
-                        </li>
-                        <li>
-                            <Link
-                                activeClass="active"
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >BLAH</Link>
                         </li>
                     </ul>
                 </CONTAINER>

@@ -16,7 +16,16 @@ const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5 {
         font-family: 'IBM Plex Mono', monospace;
         color: #20FC8F;
+        padding: .5rem;
         //color: #E8E9F3;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     h3 {
@@ -42,12 +51,18 @@ const GlobalStyle = createGlobalStyle`
     p {
         line-height: 1.8;
         font-size: 1.3rem;
+        //padding-bottom: 1rem;
     }
 
     .fa-2x {
         &:hover {
             color: #20FC8F;
         }
+    }
+
+    button:focus {
+        outline: 0 !important;
+
     }
 
 `

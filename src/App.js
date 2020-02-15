@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 import GlobalStyle from './components/GlobalStyles';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -29,6 +30,7 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
+      <Blog />
       <Footer />
       <GlobalStyle />
     </React.Fragment>

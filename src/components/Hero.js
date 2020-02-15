@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Particles from 'react-particles-js';
 import ScrollAnimation from 'react-animate-on-scroll';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const STYLES = styled.div`
     height: 100vh;
@@ -12,10 +12,13 @@ const STYLES = styled.div`
     //justify-content: center;
     //align-items: center;
     //background: rgba(32, 32, 32, 0.1);
-    background: rgba(0, 0, 0, 0.7);
+    //background: rgba(0, 0, 0, 0.7);
+    background: #181818;
+    //background: #1f1f1f;
 
     canvas {
         display: none;
+  
     }
 
     @media(min-width: 768px) {
@@ -27,8 +30,13 @@ const STYLES = styled.div`
 
 const CONTAINER = styled.div`
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
+    //background: rgba(0, 0, 0, 0.8);
+    background: rgba(24, 24, 24, .8);
     padding: 2rem;
+  
+    h1, h2 {
+      color: #E8E9F3;
+    }
    
     @media(min-width: 768px) {
         width: 50%;
@@ -67,7 +75,16 @@ const Hero = () => {
                     <h2>A front-end developer from NYC</h2>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeIn" delay="5000" duration="3">
-                    <BUTTON>ABOUT ME</BUTTON>
+                    <Link
+                        activeClass="active"
+                        to="about-me"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+                    >
+                      <BUTTON>ABOUT ME</BUTTON>
+                    </Link>
                 </ScrollAnimation>
             </CONTAINER>
             <Particles
