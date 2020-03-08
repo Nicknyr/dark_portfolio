@@ -4,10 +4,10 @@ import Particles from 'react-particles-js';
 
 
 const STYLES = styled.div`
-    height: auto;
+    height: 100%;
     width: 100%;
     position: absolute;
-    margin: 0 auto;
+    //margin: 0 auto;
 `;
 
 const ParticlesSmall = () => {
@@ -17,7 +17,7 @@ const ParticlesSmall = () => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 70
+                            "value": 5
                         },
                         "size": {
                             "value": 3

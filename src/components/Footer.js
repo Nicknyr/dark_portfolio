@@ -6,6 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const STYLES = styled.div`
     background-color: #181818;
+    //background-color: #1F1F1F;
     height: auto;
     width: 100%;
     display: flex;
@@ -17,6 +18,7 @@ const STYLES = styled.div`
 
 const CONTAINER = styled.div`
     background: #1f1f1f;
+    //background-color: #181818;
     width: 100%;
     height: auto;
     text-align: center;
@@ -93,7 +95,7 @@ const Footer = () => {
                     <p className="email">nick_kinlen@hotmail.com</p>
                     <ul className="social">
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/nicholas-kinlen/">
                                 <FontAwesomeIcon
                                     icon={['fab', 'linkedin']}
                                     size="2x"
@@ -102,7 +104,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/Nicknyr">
                                 <FontAwesomeIcon
                                     icon={['fab', 'github']}
                                     size="2x"
@@ -111,7 +113,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://stackoverflow.com/users/3875620/nick-kinlen">
                                 <FontAwesomeIcon
                                     icon={['fab', 'stack-overflow']}
                                     size="2x"

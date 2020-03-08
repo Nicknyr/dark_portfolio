@@ -9,30 +9,6 @@ const STYLES = styled.div`
     height: auto;
     width: 100%;
 
-    /*
-    .article {
-        display: flex;
-        background-image: cover;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        overflow: none;
-        height: 200px;
-        width: 40%;
-    }
-    
-    .nhl {
-        background-image: url(${NHL});
-        max-height: 300px;
-        max-width: 300px;
-    }
-
-    .formik {
-        background-image: url(${Formik});
-        max-height: 300px;
-        max-width: 300px;
-    }
-    */
-
     .article {
         display: flex;
         justify-content: center;
@@ -54,7 +30,7 @@ const STYLES = styled.div`
 
     @media(min-width: 768px) {
         .article img {
-            width: 450px;
+            width: 350px;
             cursor: pointer;
         }
     }
@@ -64,10 +40,13 @@ const STYLES = styled.div`
 const CONTAINER = styled.div`
     height: auto;
     width: auto;
-    padding: 1.5rem;
-    //position: absolute;
-    //background: red;
+    padding: 1rem;
     background: #181818;
+    margin-top: 10rem;
+    //margin-left: 20px;
+    //margin-right: 20px;
+    margin-bottom: 10rem;
+
 
     p {
         margin: 1.4rem auto;
@@ -89,7 +68,7 @@ const CONTAINER = styled.div`
 
     @media(min-width: 992px) {
         width: 70%;
-        margin: 5rem auto;
+        margin: 10rem auto;
 
         h3 {
             text-align: center;
@@ -105,6 +84,18 @@ const H3CONTAINER = styled.div`
     background: #181818;
     text-align: center;
     margin-bottom: 3rem;
+`;
+
+const ARTICLECONTAINER = styled.div`
+    height: auto;
+    width: auto;
+    //background: yellowgreen;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: 768px) {
+        flex-direction: row;
+    }
 `;
 
 /*
@@ -134,31 +125,25 @@ const Blog = () => {
                     <H3CONTAINER>
                         <h3>Recent Articles</h3>
                         <FontAwesomeIcon
-                                    icon='gem'
-                                    size="2x"
-                                    color="#20FC8F"
-                                />
+                            icon='gem'
+                            size="2x"
+                            color="#20FC8F"
+                        />
                     </H3CONTAINER>
-                    <p>Check out my recent blog articles on <span className="highlight-2">Hacker Noon</span>.</p>
+                    <p>Check out my recent blog articles on <a href="https://hackernoon.com/@nick_kinlen"><span className="highlight-2">Hacker Noon</span></a>.</p>
+                    <ARTICLECONTAINER>
+                        <div className="article">
+                            <a href="https://hackernoon.com/retrieving-hockey-stats-from-the-nhls-undocumented-api-zz3003wrw">
+                                <img src={NHL} />
+                            </a>
+                        </div>
+                        <div className="article">
+                            <a href="https://hackernoon.com/building-react-forms-with-formik-yup-and-react-bootstrap-with-a-minimal-amount-of-pain-and-suffering-1sfk3xv8">
+                                <img src={Formik} />
+                            </a>
+                        </div>
+                    </ARTICLECONTAINER>
                 </ScrollAnimation>
-                {/*
-                <div className="article nhl">
-
-                </div>
-                <div className="article formik">
-
-                </div>
-                */}
-                <div className="article">
-                    <a href="https://hackernoon.com/retrieving-hockey-stats-from-the-nhls-undocumented-api-zz3003wrw">
-                        <img src={NHL} />
-                    </a>
-                </div>
-                <div className="article">
-                    <a href="https://hackernoon.com/building-react-forms-with-formik-yup-and-react-bootstrap-with-a-minimal-amount-of-pain-and-suffering-1sfk3xv8">
-                        <img src={Formik} />
-                    </a>
-                </div>
             </CONTAINER>
         </STYLES>
     );

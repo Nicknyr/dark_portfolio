@@ -16,8 +16,8 @@ const STYLES = styled.div`
     width: 90%;
     margin: 0 auto;
     //background-color: #181818;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     position: relative;
 
     img {
@@ -54,7 +54,7 @@ const PROJECTS = styled.ul`
     li {
         list-style-type: none;
         //display: flex;
-        margin-top: 3rem;
+        margin-top: 10rem;
         //justify-content: center;
 
         h4 {
@@ -86,40 +86,17 @@ const PROJECTS = styled.ul`
                 margin: 0 auto;
             }
 
-            .image-container {
-                background-image: cover;
-                background-size: 100% auto;
-                background-repeat: no-repeat;
+            .image-container img {
+                //background-image: cover;
+                //background-size: 100% auto;
+                //background-repeat: no-repeat;
                 //background-position: 50%;
                 //height: 150px;      
-            }
-
-            .npm {
-                background-image: url(${NPM});
-            }
-
-            .brochure {
-                background-image: url(${Brochure});
-            }
-
-            .itunes {
-                background-image: url(${Top100});
-            }
-
-            .euro {
-                background-image: url(${EuroMedium});
-            }
-
-            .spacex {
-                background-image: url(${SpaceX});
-            }
-
-            .bitcoin {
-                background-image: url(${BitcoinMedium});
-            }
-
-            .recipebox {
-                background-image: url(${RecipeMedium});
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: 150 150;
+                //margin: 2rem;
             }
         }
     }
@@ -136,11 +113,20 @@ const PROJECTS = styled.ul`
                 p {
                     text-align: left;
                     margin: 0 1rem;
+                    padding-top: 0;
                 }
 
                 .image-container {
-                    flex: 1;
-                    height: 300px;
+                    //background: yellow;
+                    height: 400px;
+                    width: 500px;
+                }
+
+                .image-container img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    object-position: top;
                 }
 
                 .image-even {
@@ -180,7 +166,7 @@ const BUTTON = styled.button`
     color: #E8E9F3;
     border: none;
     border-radius: 10px;
-    margin: 2rem 1rem;
+    //margin: 2rem 1rem;
     display: flex;
     align-items: center;
     //width: 15rem;
@@ -222,29 +208,33 @@ const Portfolio = () => {
                                 <h4>NPM LANDING PAGE CLONE</h4>
                                 <div className="project">
                                     <div className="image-container npm">
-                                        {/*<img src={NPM} height="250" width="auto"/>*/}
+                                        <img src={NPM} />
                                     </div>
                                     <div className="details-container">
                                         <p>
                                             My implementation of the npmjs.com website landing page. Built using React and styled-components.
                                         </p>
                                         <BUTTONCONTAINER>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='desktop'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                View
-                                            </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://npmclone.surge.sh/">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='desktop'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    View
+                                                </BUTTON>
+                                            </a>
+                                            <a href="https://github.com/Nicknyr/npm_clone">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -255,13 +245,14 @@ const Portfolio = () => {
                                 <h4>Web Dev Agency Site</h4>
                                 <div className="project">
                                     <div className="image-container image-even brochure">
-                                        {/*<img src={Brochure} height="250" width="auto" />*/}
+                                        <img src={Brochure} height="250" width="auto" />
                                     </div>
                                     <div className="details-container details-even">
                                         <p>
                                             A brochure styled website for a ficticious web development agency built with React and Styled-Components.
                                         </p>
                                         <BUTTONCONTAINER>
+                                            <a href="https://brochure-site.surge.sh/">
                                             <BUTTON>
                                                 <FontAwesomeIcon
                                                     icon='desktop'
@@ -270,14 +261,17 @@ const Portfolio = () => {
                                                 />
                                                 View
                                             </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            </a>
+                                            <a href="https://github.com/Nicknyr/Brochure_SIte">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -288,7 +282,7 @@ const Portfolio = () => {
                                 <h4>iTunes Top 100 Albums</h4>
                                 <div className="project">
                                     <div className="image-container itunes">
-                                        {/*<img src={Top100} height="250" width="auto"/>*/}
+                                        <img src={Top100} height="250" width="auto"/>
                                     </div>
                                     <div className="details-container">
                                         <p>
@@ -303,14 +297,16 @@ const Portfolio = () => {
                                                 />
                                                 View
                                             </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://github.com/Nicknyr/Top100">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -321,29 +317,33 @@ const Portfolio = () => {
                                 <h4>European GDP Map</h4>
                                 <div className="project">
                                     <div className="image-container image-even euro">
-                                        {/*<img src={EuroMedium} height="250" width="auto" />*/}
+                                        <img src={EuroMedium} height="250" width="auto" />
                                     </div>
                                     <div className="details-container details-even">
                                         <p>
                                             A choropleth map that shows European Gross Domestic Product by country. Built with Mapbox and Leaflet.
                                         </p>
                                         <BUTTONCONTAINER>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='desktop'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                View
-                                            </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://eurogdp.herokuapp.com/">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='desktop'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    View
+                                                </BUTTON>
+                                            </a>
+                                            <a href="https://github.com/Nicknyr/Europe_Choropleth">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -354,29 +354,33 @@ const Portfolio = () => {
                                 <h4>Space X Facilities</h4>
                                 <div className="project">
                                     <div className="image-container spacex">
-                                        {/*<img src={SpaceX} height="250" width="auto"/>*/}
+                                        <img src={SpaceX} height="250" width="auto"/>
                                     </div>
                                     <div className="details-container">
                                         <p>
                                             A React app that plots SpaceX and NASA facilities on a map of the U.S. using a Mapbox map and Leaflet.js. 
                                         </p>
                                         <BUTTONCONTAINER>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='desktop'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                View
-                                            </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://launchfacilities.herokuapp.com/">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='desktop'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    View
+                                                </BUTTON>
+                                            </a>
+                                            <a href="https://github.com/Nicknyr/NASA-Space_Steemit_Tutorial">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -387,29 +391,33 @@ const Portfolio = () => {
                                 <h4>Bitcoin Price Line Graph</h4>
                                 <div className="project">
                                     <div className="image-container image-even bitcoin">
-                                        {/*<img src={BitcoinMedium} height="250" width="auto" />*/}
+                                        <img src={BitcoinMedium} height="250" width="auto" />
                                     </div>
                                     <div className="details-container details-even">
                                         <p>
                                             A D3 line graph that plots Bitcoin prices by date.
                                         </p>
                                         <BUTTONCONTAINER>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='desktop'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                View
-                                            </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://codepen.io/nick_kinlen/full/yEYmxy/">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='desktop'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    View
+                                                </BUTTON>
+                                            </a>
+                                            <a href="https://codepen.io/nick_kinlen/pen/yEYmxy">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>
@@ -420,29 +428,33 @@ const Portfolio = () => {
                                 <h4>React Recipe Box</h4>
                                 <div className="project">
                                     <div className="image-container recipebox">
-                                        {/*<img src={RecipeMedium} height="250" width="auto" />*/}
+                                        <img src={RecipeMedium} height="250" width="auto" />
                                     </div>
                                     <div className="details-container">
                                         <p>
                                             A simple React to-do-list style app that allows users to add/edit/delete recipes in state. Built using React-Bootstrap.
                                         </p>
                                         <BUTTONCONTAINER>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='desktop'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                View
-                                            </BUTTON>
-                                            <BUTTON>
-                                                <FontAwesomeIcon
-                                                    icon='code'
-                                                    size="sm"
-                                                    color="#E8E9F3"
-                                                />
-                                                Code
-                                            </BUTTON>
+                                            <a href="https://fcc-recipebox.surge.sh/">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='desktop'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    View
+                                                </BUTTON>
+                                            </a>
+                                            <a href="https://github.com/Nicknyr/FCC_Recipe_Box">
+                                                <BUTTON>
+                                                    <FontAwesomeIcon
+                                                        icon='code'
+                                                        size="sm"
+                                                        color="#E8E9F3"
+                                                    />
+                                                    Code
+                                                </BUTTON>
+                                            </a>
                                         </BUTTONCONTAINER>
                                     </div>
                             </div>

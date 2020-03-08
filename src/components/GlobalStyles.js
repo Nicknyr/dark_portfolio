@@ -8,13 +8,14 @@ const GlobalStyle = createGlobalStyle`
     //font-family: 'IBM Plex Sans', sans-serif;
 
     body {
-        font-family: 'IBM Plex Sans', sans-serif;
-        background-color: #1F1F1F;
+        font-family: 'IBM Plex Mono', monospace;
+        //background-color: #1F1F1F;
+        background-color: #181818;
         color: #E8E9F3;
     }
 
     h1, h2, h3, h4, h5 {
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'IBM Plex Sans', sans-serif;
         color: #20FC8F;
         padding: .5rem;
         //color: #E8E9F3;
@@ -29,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h3 {
-        font-size: 1.9rem;
+        font-size: 2.2rem;
         margin-bottom: .8rem;
     }
 
@@ -41,17 +42,61 @@ const GlobalStyle = createGlobalStyle`
     a {
         color: #20FC8F;
         font-family: 'IBM Plex Mono', monospace;
-        text-decoration: none;
+        text-decoration: none;      
+    }
 
+    .underline {
+        transition: .3s all linear;
+        position: relative;
+        padding: .3em 0;
+
+        &:before, &:after {
+            content: "";
+            height: 3px;
+            width: 0%;
+            background: #20FC8F;
+            position: absolute;
+            bottom: 0;
+            transition: .2s all linear;
+        }
+
+        &:before {
+            left: 50%;
+        }
+
+        &:after {
+            right: 50%;
+        }
+        
         &:hover {
-            text-decoration: underline;
+            color: #20FC8F;
+
+            &:before, &:after {
+                width: 100%;
+            }
+
+            &:before {
+                left: 0%;
+            }
+
+            &:after {
+                right: 0%;
+            }
+        }
+
+        &:active, &:focus {
+            color: darken(#20FC8F, 10%);
+
+            &:before, &:after {
+                background: darken(#20FC8F, 10%);
+
+            }
         }
     }
 
     p {
         line-height: 1.8;
-        font-size: 1.3rem;
-        //padding-bottom: 1rem;
+        font-size: 1.1rem;
     }
 
     .fa-2x {
@@ -60,9 +105,19 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    
+
+    /*
     button:focus {
         outline: 0 !important;
 
+    }
+    */
+
+    @media(min-width: 768px) {
+        p {
+            font-size: 1.3rem;
+        }
     }
 
 `

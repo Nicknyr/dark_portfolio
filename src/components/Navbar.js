@@ -1,93 +1,28 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import { bubble as Menu } from 'react-burger-menu'
 import { render } from '@testing-library/react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const STYLES = styled.div`
-    height: 5rem;
+    height: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #181818;
-    //background: rgba(0, 0, 0, 0.7);
+    background-color: black;
     position: fixed;
     z-index: 999;
 
-
-    /* Position and sizing of burger button */
-    .bm-burger-button {
-        position: sticky;
-        width: 2rem;
-        height: 1.8rem;
-        right: 2rem;
-        top: 1.7rem;
-
-        @media(min-width: 768px) {
-            display: none;
-        }
+    .name {
+        font-size: 1.2rem;
+        color: #E8E9F3;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: bold;
+        margin-left: 1rem;
+        
     }
-
-    /* Color/shape of burger icon bars */
-    .bm-burger-bars {
-        background: #20FC8F;
-    }
-
-    /* Color/shape of burger icon bars on hover*/
-    .bm-burger-bars-hover {
-        background: snow;
-    }
-
-    /* Position and sizing of clickable cross button */
-    .bm-cross-button {
-        height: 24px;
-        width: 24px;
-    }
-
-    /* Color/shape of close button cross */
-    .bm-cross {
-        background: #bdc3c7;
-    }
-
-    /*
-    Sidebar wrapper styles
-    Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-    */
-    .bm-menu-wrap {
-        position: fixed;
-        height: 100%;
-    }
-
-    /* General sidebar styles */
-    .bm-menu {
-        background-color: #181818;
-        padding: 2.5em 1.5em 0;
-        font-size: 1.15em;
-    }
-
-    /* Morph shape necessary with bubble or elastic */
-    .bm-morph-shape {
-        fill: #181818;
-    }
-
-    /* Wrapper for item list */
-    .bm-item-list {
-        color: #181818;
-        padding: 0.8em;
-    }
-
-    /* Individual item */
-    .bm-item {
-        display: inline-block;
-    }
-
-    /* Styling of overlay */
-    .bm-overlay {
-        background: rgba(0, 0, 0, 0.3);
-    }
-
+    
     .navigation {
         display: none;
 
@@ -96,13 +31,13 @@ const STYLES = styled.div`
             margin-right: 2rem;
             
             a {
-                color: #20FC8F;
+                color: #E8E9F3;
                 font-weight: bold;
                 font-size: 1.2rem;
                 cursor: pointer;
 
                 &:hover {
-                    color: #E8E9F3;
+                    color: #20FC8F;
                     text-decoration: none;
                 }
             }
@@ -126,82 +61,230 @@ const CONTAINER = styled.div`
     justify-content: space-between;
 `;
 
+const HAMBURGER = styled.div`
+    display: flex;
+
+    @media(min-width: 769px) {
+        display: none;
+    }
+`;
+
+const MENU = styled.div`
+    position: absolute;
+    background: #181818;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+         -o-animation: fadein .5s; /* Opera < 12.1 */
+            animation: fadein .5s;
+
+    .fa-2x {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    ul {
+        //background: yellow;
+
+        li {
+            margin-top: 3rem;
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #20FC8F;
+        }
+    }
+
+    @media(min-width: 769px) {
+        display: none;
+    }
+`;
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-
+            showMenu: false
         };
     }
 
     showSettings = (event) => {
         event.preventDefault();
     }
+
+    showMenu = () => {
+        this.setState({
+            showMenu: !this.state.showMenu
+        })
+    }
     
 
     render() {
         return (
-            <STYLES>
-                <CONTAINER>
-                    <span>
+            <div>
+                <STYLES>
+                    <CONTAINER>
+                        <span>
+                            <FontAwesomeIcon
+                                icon='gem'
+                                size="lg"
+                                color="#20FC8F"
+                            />
+                            <span className="name">Nick Kinlen</span>
+                        </span>
+                        <ul className="navigation">
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="about-me"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                >ABOUT</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                >PORTFOLIO</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="blog"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                >BLOG</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="footer"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                >CONTACT</Link>
+                            </li>
+                        </ul>
+                        <HAMBURGER>
+                            <FontAwesomeIcon
+                                icon="bars"
+                                size="2x"
+                                color="snow"
+                                onClick={this.showMenu}
+                            />
+                        </HAMBURGER>
+                    </CONTAINER>
+                </STYLES>
+                {this.state.showMenu ?
+                    <MENU>
                         <FontAwesomeIcon
-                            icon='gem'
-                            size="lg"
-                            color="#20FC8F"
-                        />
-                    </span>
-                    <Menu right>
-                        <a id="home" className="menu-item" href="/">Home</a>
-                        <a id="about" className="menu-item" href="/about">About</a>
-                        <a id="contact" className="menu-item" href="/contact">Contact</a>
-                        <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-                    </Menu>
-                    <ul className="navigation">
-                        <li>
-                            <Link
-                                activeClass="active"
-                                to="about-me"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >ABOUT</Link>
-                        </li>
-                        <li>
-                            <Link
-                                activeClass="active"
-                                to="portfolio"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >PORTFOLIO</Link>
-                        </li>
-                        <li>
-                            <Link
-                                activeClass="active"
-                                to="blog"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >BLOG</Link>
-                        </li>
-                        <li>
-                            <Link
-                                activeClass="active"
-                                to="footer"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration= {500}
-                            >CONTACT</Link>
-                        </li>
-                    </ul>
-                </CONTAINER>
-            </STYLES>
+                                icon="times"
+                                size="2x"
+                                color="snow"
+                                onClick={this.showMenu}
+                            />
+                        <ul>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="about-me"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                    onClick={this.showMenu}
+                                >ABOUT</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                    onClick={this.showMenu}
+                                >PORTFOLIO</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="blog"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                    onClick={this.showMenu}
+                                >BLOG</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    activeClass="active"
+                                    to="footer"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration= {500}
+                                    className="underline"
+                                    onClick={this.showMenu}
+                                >CONTACT</Link>
+                            </li>
+                        </ul>
+                    </MENU>
+                :null}
+            </div>
         );
     }
 }
