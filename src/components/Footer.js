@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ParticlesSmall from './ParticlesSmall';
 
 const STYLES = styled.div`
     background-color: #181818;
@@ -35,13 +36,12 @@ const CONTAINER = styled.div`
     .email {
         margin-top: 2rem;
         margin-bottom: 2rem;
-        color: #DF2935;
+        color: #D81E5B;
         font-style: italic;
         text-decoration: underline;
         font-size: 1rem;
         
         &:hover {
-            color: #20FC8F;
             cursor: pointer;
         }
     }

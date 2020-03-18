@@ -17,9 +17,11 @@ const STYLES = styled.div`
     .name {
         font-size: 1.2rem;
         color: #E8E9F3;
+        //color: #20FC8F;
         font-family: 'IBM Plex Mono', monospace;
         font-weight: bold;
         margin-left: 1rem;
+        text-transform: uppercase;
         
     }
     
@@ -37,7 +39,7 @@ const STYLES = styled.div`
                 cursor: pointer;
 
                 &:hover {
-                    color: #20FC8F;
+                    color: #D81E5B;
                     text-decoration: none;
                 }
             }

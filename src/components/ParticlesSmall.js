@@ -17,7 +17,7 @@ const ParticlesSmall = () => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 5
+                            "value": 40
                         },
                         "size": {
                             "value": 3

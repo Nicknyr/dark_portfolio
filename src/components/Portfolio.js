@@ -161,7 +161,7 @@ const BUTTONCONTAINER = styled.div`
 `;
 
 const BUTTON = styled.button`
-    background-color: #DF2935;
+    background-color: #D81E5B;
     font-size: 1rem;
     color: #E8E9F3;
     border: none;
@@ -193,17 +193,17 @@ const Portfolio = () => {
     return (
         <STYLES name="portfolio">
             <CONTAINER>
-                <ScrollAnimation  animateIn="fadeIn" duration="3">
+                <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                     <H3CONTAINER>
                         <h3>Projects</h3>
                         <FontAwesomeIcon
                             icon='gem'
                             size="2x"
-                            color=" #20FC8F"
+                            color="#20FC8F"
                         />
                     </H3CONTAINER>
                     <PROJECTS>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>NPM LANDING PAGE CLONE</h4>
                                 <div className="project">
@@ -240,7 +240,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>Web Dev Agency Site</h4>
                                 <div className="project">
@@ -277,7 +277,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>iTunes Top 100 Albums</h4>
                                 <div className="project">
@@ -312,7 +312,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>European GDP Map</h4>
                                 <div className="project">
@@ -349,7 +349,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>Space X Facilities</h4>
                                 <div className="project">
@@ -386,7 +386,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>Bitcoin Price Line Graph</h4>
                                 <div className="project">
@@ -423,7 +423,7 @@ const Portfolio = () => {
                             </div>
                             </li>
                         </ScrollAnimation>
-                        <ScrollAnimation  animateIn="fadeIn" duration="3">
+                        <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
                                 <h4>React Recipe Box</h4>
                                 <div className="project">

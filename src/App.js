@@ -13,15 +13,16 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
-import GlobalStyle from './components/GlobalStyles';
+import Global from './components/GlobalStyles';
 import Container from './components/Container';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin, faGithub, faStackOverflow, faJsSquare, faHtml5, faCss3Alt, faReact, faNode, faNpm, faGit, faSass, faLinux} from '@fortawesome/free-brands-svg-icons';
-import { faGem, faCode, faDesktop, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faStackOverflow, faJsSquare, faHtml5, faCss3Alt, faReact, faNode, faNpm, faGit, faSass, faLinux, faBitcoin} from '@fortawesome/free-brands-svg-icons';
+import { faGem, faLaptop, faCode, faDesktop, faBars, faTimes, faCity, faHockeyPuck, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { Reset } from 'styled-reset';
+import ParticlesSmall from './components/ParticlesSmall';
 
-library.add(fab, faLinkedin, faGithub, faStackOverflow, faGem, faCode, faDesktop, faJsSquare, faHtml5, faCss3Alt, faReact, faNode, faNpm, faGit, faSass, faLinux, faBars, faTimes);
+library.add(fab, faLinkedin, faGithub, faStackOverflow, faGem, faCode, faDesktop, faJsSquare, faHtml5, faCss3Alt, faReact, faNode, faNpm, faGit, faSass, faLinux, faBars, faTimes, faCity, faBitcoin, faHockeyPuck, faBriefcase, faLaptop);
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       <Portfolio />
       <Blog />
       <Footer />
-      <GlobalStyle />
+      <Global />
     </React.Fragment>
 
   );

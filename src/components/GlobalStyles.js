@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+import React, { Component } from 'react';
+import Particles from 'react-particles-js';
+
 
 // #DF2935
 
@@ -18,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'IBM Plex Sans', sans-serif;
         color: #20FC8F;
         padding: .5rem;
-        //color: #E8E9F3;
+        color: #E8E9F3;
     }
 
     h1 {
@@ -30,17 +33,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h3 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
         margin-bottom: .8rem;
     }
 
     h4 {
         font-size: 1.5rem;
         margin-bottom: .8rem;
+        color: #20FC8F;
     }
 
     a {
-        color: #20FC8F;
+        //color: #20FC8F;
+        color: #D81E5B;
         font-family: 'IBM Plex Mono', monospace;
         text-decoration: none;      
     }
@@ -54,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
             content: "";
             height: 3px;
             width: 0%;
-            background: #20FC8F;
+            background: #D81E5B;
             position: absolute;
             bottom: 0;
             transition: .2s all linear;
@@ -69,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
         }
         
         &:hover {
-            color: #20FC8F;
+            color: #D81E5B;
 
             &:before, &:after {
                 width: 100%;
@@ -101,18 +107,14 @@ const GlobalStyle = createGlobalStyle`
 
     .fa-2x {
         &:hover {
-            color: #20FC8F;
+            color: #D81E5B;
         }
     }
 
-    
-
-    /*
     button:focus {
         outline: 0 !important;
 
     }
-    */
 
     @media(min-width: 768px) {
         p {

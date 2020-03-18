@@ -9,22 +9,51 @@ const STYLES = styled.div`
     height: auto;
     width: 100%;
 
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 2rem;
+        height: 250px;
+        width: 350px;
+        opacity: 0;
+        transition: .5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+        cursor: pointer;
+        color: #20FC8F;
+    
+    }
+
     .article {
         display: flex;
         justify-content: center;
         height: 100%;
         width: 100%;
+        position: relative;
 
+        &:hover {
+            opacity: .5;
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+        }
+
+        &:hover .overlay h3 {
+            opacity: 1;
+        }
+ 
         img {
             width: 250px;
             height: 250px;
             object-fit: cover;
             object-position: 150 150;
             margin: 2rem;
-
-            &:hover {
-                opacity: .5;
-            }
         }
     }
 
@@ -136,11 +165,13 @@ const Blog = () => {
                             <a href="https://hackernoon.com/retrieving-hockey-stats-from-the-nhls-undocumented-api-zz3003wrw">
                                 <img src={NHL} />
                             </a>
+                            <div className="overlay"><h3>NHL API ARTICLE</h3></div>
                         </div>
                         <div className="article">
                             <a href="https://hackernoon.com/building-react-forms-with-formik-yup-and-react-bootstrap-with-a-minimal-amount-of-pain-and-suffering-1sfk3xv8">
                                 <img src={Formik} />
                             </a>
+                            <div className="overlay">Blah blah blah</div>
                         </div>
                     </ARTICLECONTAINER>
                 </ScrollAnimation>

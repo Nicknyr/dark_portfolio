@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ParticlesSmall from './ParticlesSmall';
+
 
 const STYLES = styled.div`
 
@@ -40,8 +42,9 @@ const H3CONTAINER = styled.div`
 const Skills = () => {
     return (
         <STYLES>
+            <ParticlesSmall />
             <CONTAINER name="skills">
-                <ScrollAnimation  animateIn="fadeIn" duration="3">
+                <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                     <H3CONTAINER>
                         <h3>Skills</h3>
                         <FontAwesomeIcon

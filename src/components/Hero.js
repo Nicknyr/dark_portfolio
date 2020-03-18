@@ -3,20 +3,14 @@ import styled, { css } from 'styled-components';
 import Particles from 'react-particles-js';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const STYLES = styled.div`
     height: 100vh;
     width: 100%;
     position: relative;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
-    //background: rgba(32, 32, 32, 0.1);
-    //background: rgba(0, 0, 0, 0.7);
     background: #181818;
-    //background: #1f1f1f;
     overflow: auto;
-  
 
     canvas {
         display: block;
@@ -33,36 +27,17 @@ const STYLES = styled.div`
 
 const CONTAINER = styled.div`
     position: absolute;
-    //background: rgba(0, 0, 0, 0.8);
     background: rgba(24, 24, 24, .8);
     padding: 2rem;
     margin-top: 10rem;
 
-    .toggle {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-    }
-
-    .one {
-      z-index: 999;
-      display: none;
-    }
-
-    .two {
-      z-index: 1;
-      display: none;
-    }
-    .three  {
-      z-index: 2;
-      display: none;
-    }
-     .four {
-      z-index: 3;
-    }
-  
     h1, h2 {
       color: #E8E9F3;
+    }
+
+    .icon-span {
+      padding-right: .3em;
+      padding-left: .3em;
     }
    
     @media(min-width: 768px) {
@@ -76,7 +51,7 @@ const CONTAINER = styled.div`
 const BUTTON = styled.button`
     height: 3rem;
     width: 7rem;
-    background: #DF2935;
+    background: #D81E5B;
     border-radius: 10px;
     border: none;
     color: #E8E9F3;
@@ -95,20 +70,31 @@ const Hero = () => {
     return (
         <STYLES>
             <CONTAINER>
-                <ScrollAnimation  animateIn="fadeIn" delay="1500" duration="3">
+                <ScrollAnimation  animateIn="fadeIn" delay="1500" duration="3" animateOnce="true">
                     <h1>Hi, I'm Nick</h1>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeIn" delay="3000" duration="3">
-                    <h2>A  
-                        <span className="toggle">
-                          <span className="one">  developer </span>
-                          <span className="two"> designer </span>
-                          <span className="three"> tech blogger </span>
-                          <span className="four"> entrepreneur </span>
+                <ScrollAnimation animateIn="fadeIn" delay="3000" duration="3" animateOnce="true">
+                    <h2>A front-end web developer 
+                      <span className="icon-span">
+                        <FontAwesomeIcon
+                              icon='code'
+                              size="md"
+                              color="#D81E5B"
+                          />
+                      </span>
+                    </h2>
+                    <h2>
+                      from NYC
+                        <span className="icon-span">
+                          <FontAwesomeIcon
+                                icon='city'
+                                size="md"
+                                color="#D81E5B"
+                            />
                         </span>
-                       from NYC</h2>
+                    </h2>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeIn" delay="5000" duration="3">
+                <ScrollAnimation animateIn="fadeIn" delay="5000" duration="3" animateOnce="true">
                     <Link
                         activeClass="active"
                         to="about-me"

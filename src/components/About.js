@@ -24,10 +24,10 @@ const SKILLS = styled.div`
         width: 100%;
         justify-content: center;
         margin: 0 auto;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-weight: 500;
         text-transform: uppercase;
-        color: #DF2935;
+        color: #20FC8F;
         margin: .3rem;
         font-family: 'IBM Plex Mono', monospace;
         text-align: center;
@@ -47,6 +47,11 @@ const CONTAINER = styled.div`
     position: relative;
     //margin-left: 20px;
     //margin-right: 20px;
+
+    .icon-span {
+      padding-right: .5em;
+      padding-left: .5em;
+    }
 
     .particles-container {
         height: 300px;
@@ -114,7 +119,7 @@ const About = () => {
                     <ParticlesSmall />
                 </div>
                 */}
-                <ScrollAnimation  animateIn="fadeIn" duration="3">
+                <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                     <H3CONTAINER>
                         <h3>About Me</h3>
                         <FontAwesomeIcon
@@ -124,12 +129,46 @@ const About = () => {
                         />
                     </H3CONTAINER>
                     <p>I am a front-end developer from <span className="highlight-2">NYC</span>.</p>
-                    <p>I build modern, responsive web apps with React.js and am proficient in the core web languages <span className="highlight-2">HTML5/CSS3/Javascript</span>, as well as many other libraries and frameworks such as <span className="highlight-2">Redux, Sass, Styled-Components, Mapbox, Leaflet, D3</span>, etc... </p>
-                    <p>I also publish web development related articles on <span className="highlight underline"><a href="#">Hackernoon</a></span></p>
-                    <p>I am passionate about all things web development, New York Rangers hockey, crypto-currency, and entrepreneurship.</p>
+                    <p>I build modern, responsive web apps with React.js and am proficient in the core web languages <span className="highlight-2">HTML5, CSS3, Javascript</span>, as well as many other libraries and frameworks such as <span className="highlight-2">Redux, Sass, Styled-Components, Mapbox, Leaflet, D3</span>, etc... </p>
+                    <p>I also publish web development related articles on <span className="highlight underline"><a href="https://hackernoon.com/@nick_kinlen">Hackernoon</a></span>.</p>
+                    <p>I am passionate about all things 
+                        web development
+                        <span className="icon-span">
+                            <FontAwesomeIcon
+                                icon="laptop"
+                                size="md"
+                                color="#20FC8F"
+                            />
+                        </span>
+                        , 
+                        New York Rangers hockey
+                        <span className="icon-span">
+                            <FontAwesomeIcon
+                                icon="hockey-puck"
+                                size="md"
+                                color="#20FC8F"
+                            />
+                        </span>
+                        , crypto-currency
+                        <span className="icon-span">
+                            <FontAwesomeIcon
+                                icon={['fab', 'bitcoin']}
+                                size="md"
+                                color="#20FC8F"
+                            />
+                        </span>, 
+                        and entrepreneurship.
+                        <span className="icon-span">
+                            <FontAwesomeIcon
+                                icon="briefcase"
+                                size="md"
+                                color="#20FC8F"
+                            />
+                        </span>
+                    </p>
                     <p>Currently I am seeking a front-end role in the NYC metro area.</p>
                 </ScrollAnimation>
-                <ScrollAnimation  animateIn="fadeIn" duration="3">
+                <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                     <SKILLS>
                         <H3CONTAINER>
                             <h3>Skills</h3>
