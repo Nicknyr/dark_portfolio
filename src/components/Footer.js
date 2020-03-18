@@ -55,6 +55,12 @@ const CONTAINER = styled.div`
         li {
             list-style-type: none;
         }
+
+        .fa-2x {
+            &:hover {
+                color: #D81E5B;
+            }
+         }
     }
 
     @media(min-width: 768px) {

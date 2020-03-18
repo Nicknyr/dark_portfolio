@@ -205,7 +205,9 @@ const Portfolio = () => {
                     <PROJECTS>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>NPM LANDING PAGE CLONE</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4 className="underline-2">Npm Landing Page</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container npm">
                                         <img src={NPM} />
@@ -242,7 +244,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>Web Dev Agency Site</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>Web Dev Agency Site</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container image-even brochure">
                                         <img src={Brochure} height="250" width="auto" />
@@ -279,7 +283,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>iTunes Top 100 Albums</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>iTunes Top 100 Albums</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container itunes">
                                         <img src={Top100} height="250" width="auto"/>
@@ -314,7 +320,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>European GDP Map</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>European GDP Map</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container image-even euro">
                                         <img src={EuroMedium} height="250" width="auto" />
@@ -351,7 +359,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>Space X Facilities</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>Space X Facilities</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container spacex">
                                         <img src={SpaceX} height="250" width="auto"/>
@@ -388,7 +398,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>Bitcoin Price Line Graph</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>Bitcoin Price Line Graph</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container image-even bitcoin">
                                         <img src={BitcoinMedium} height="250" width="auto" />
@@ -425,7 +437,9 @@ const Portfolio = () => {
                         </ScrollAnimation>
                         <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                             <li>
-                                <h4>React Recipe Box</h4>
+                                <ScrollAnimation animateIn="bounceInDown" duration="1" animateOnce="true">
+                                    <h4>React Recipe Box</h4>
+                                </ScrollAnimation>
                                 <div className="project">
                                     <div className="image-container recipebox">
                                         <img src={RecipeMedium} height="250" width="auto" />

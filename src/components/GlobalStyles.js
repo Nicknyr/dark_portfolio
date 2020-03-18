@@ -105,12 +105,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1rem;
     }
 
-    .fa-2x {
-        &:hover {
-            color: #D81E5B;
-        }
-    }
-
     button:focus {
         outline: 0 !important;
 
@@ -121,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 1.3rem;
         }
     }
-
+ 
 `
 
 export default GlobalStyle;

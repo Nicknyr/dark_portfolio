@@ -7,7 +7,8 @@ const STYLES = styled.div`
     height: 100%;
     width: 100%;
     position: absolute;
-    //margin: 0 auto;
+    margin: 0 auto;
+    z-index: -10;
 `;
 
 const ParticlesSmall = () => {
@@ -17,7 +18,7 @@ const ParticlesSmall = () => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 40
+                            "value": 20
                         },
                         "size": {
                             "value": 3

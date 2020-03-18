@@ -45,8 +45,6 @@ const CONTAINER = styled.div`
     background: #181818;
     margin-top: 5rem;
     position: relative;
-    //margin-left: 20px;
-    //margin-right: 20px;
 
     .icon-span {
       padding-right: .5em;
@@ -59,7 +57,6 @@ const CONTAINER = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        //background: yellow;
 
         canvas {
             //width: 100px;
@@ -70,7 +67,6 @@ const CONTAINER = styled.div`
   
     p {
         margin: 1rem auto;
-        //background: yellow;
         width: 80%;
     }
 
@@ -78,10 +74,9 @@ const CONTAINER = styled.div`
         color: #20FC8F;
     }
 
-    .highlight-2 {
-        //color: #DF2935;
-        color: #20FC8F;
-    }
+   .underline {
+       text-decoration: underline;
+   }
 
     .fa-2x {
         margin: 0 auto;
@@ -103,7 +98,6 @@ const CONTAINER = styled.div`
 `;
 
 const H3CONTAINER = styled.div`
-    //background: #181818;
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 3rem;
@@ -114,11 +108,6 @@ const About = () => {
     return (
         <STYLES>
             <CONTAINER name="about-me">
-                {/*
-                <div className="particles-container">
-                    <ParticlesSmall />
-                </div>
-                */}
                 <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
                     <H3CONTAINER>
                         <h3>About Me</h3>
@@ -128,44 +117,10 @@ const About = () => {
                             color="#20FC8F"
                         />
                     </H3CONTAINER>
-                    <p>I am a front-end developer from <span className="highlight-2">NYC</span>.</p>
-                    <p>I build modern, responsive web apps with React.js and am proficient in the core web languages <span className="highlight-2">HTML5, CSS3, Javascript</span>, as well as many other libraries and frameworks such as <span className="highlight-2">Redux, Sass, Styled-Components, Mapbox, Leaflet, D3</span>, etc... </p>
+                    <p>I am a front-end developer from NYC.</p>
+                    <p>I build modern, responsive web apps with React.js and am proficient in the core web languages HTML5, CSS3, Javascript, as well as many other libraries and frameworks such as Redux, Sass, Styled-Components, Mapbox, Leaflet, D3, etc... </p>
                     <p>I also publish web development related articles on <span className="highlight underline"><a href="https://hackernoon.com/@nick_kinlen">Hackernoon</a></span>.</p>
-                    <p>I am passionate about all things 
-                        web development
-                        <span className="icon-span">
-                            <FontAwesomeIcon
-                                icon="laptop"
-                                size="md"
-                                color="#20FC8F"
-                            />
-                        </span>
-                        , 
-                        New York Rangers hockey
-                        <span className="icon-span">
-                            <FontAwesomeIcon
-                                icon="hockey-puck"
-                                size="md"
-                                color="#20FC8F"
-                            />
-                        </span>
-                        , crypto-currency
-                        <span className="icon-span">
-                            <FontAwesomeIcon
-                                icon={['fab', 'bitcoin']}
-                                size="md"
-                                color="#20FC8F"
-                            />
-                        </span>, 
-                        and entrepreneurship.
-                        <span className="icon-span">
-                            <FontAwesomeIcon
-                                icon="briefcase"
-                                size="md"
-                                color="#20FC8F"
-                            />
-                        </span>
-                    </p>
+                    <p>I am passionate about all things web development, New York Rangers hockey, crypto-currency ,and entrepreneurship.</p>
                     <p>Currently I am seeking a front-end role in the NYC metro area.</p>
                 </ScrollAnimation>
                 <ScrollAnimation  animateIn="fadeIn" duration="3" animateOnce="true">
@@ -195,74 +150,6 @@ const About = () => {
                         </p>
                     </SKILLS>
                 </ScrollAnimation>
-                
-                {/*
-                <ul>
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'react']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'javascript-square']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'html5']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'css3-alt']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'node']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'git']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'sass']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'npm']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                    
-                        <FontAwesomeIcon
-                            icon={['fab', 'linux']}
-                            size="2x"
-                            color="#DF2935"
-                        />
-                    
-                </ul>
-                */}
             </CONTAINER>
         </STYLES>
     );

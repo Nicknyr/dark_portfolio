@@ -26,6 +26,7 @@ const STYLES = styled.div`
         margin: 2rem auto;
         cursor: pointer;
         color: #20FC8F;
+        z-index: 200;
     
     }
 
@@ -36,18 +37,18 @@ const STYLES = styled.div`
         width: 100%;
         position: relative;
 
+        
         &:hover {
             opacity: .5;
         }
 
         &:hover .overlay {
             opacity: 1;
+            position: absolute;
+            z-index: 100;
         }
 
-        &:hover .overlay h3 {
-            opacity: 1;
-        }
- 
+       
         img {
             width: 250px;
             height: 250px;
@@ -118,7 +119,6 @@ const H3CONTAINER = styled.div`
 const ARTICLECONTAINER = styled.div`
     height: auto;
     width: auto;
-    //background: yellowgreen;
     display: flex;
     flex-direction: column;
 
@@ -126,25 +126,6 @@ const ARTICLECONTAINER = styled.div`
         flex-direction: row;
     }
 `;
-
-/*
-const ARTICLE = styled.div `
-    background-image: cover;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
-
-    .nhl {
-        background-image: url(${NHL});
-    }
-
-    .formik {
-        background-image: url(${Formik});
-    }
-`;
-*/
-
 
 const Blog = () => {
     return (
@@ -164,14 +145,14 @@ const Blog = () => {
                         <div className="article">
                             <a href="https://hackernoon.com/retrieving-hockey-stats-from-the-nhls-undocumented-api-zz3003wrw">
                                 <img src={NHL} />
+                                <div className="overlay">NHL API ARTICLE</div>
                             </a>
-                            <div className="overlay"><h3>NHL API ARTICLE</h3></div>
                         </div>
                         <div className="article">
                             <a href="https://hackernoon.com/building-react-forms-with-formik-yup-and-react-bootstrap-with-a-minimal-amount-of-pain-and-suffering-1sfk3xv8">
                                 <img src={Formik} />
+                                <div className="overlay">Building Formik forms in React</div>
                             </a>
-                            <div className="overlay">Blah blah blah</div>
                         </div>
                     </ARTICLECONTAINER>
                 </ScrollAnimation>
